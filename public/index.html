@@ -3,7 +3,7 @@
   <head>
     <title>Comkaraka / Admin</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="/styles"/>
   </head>
   <body>
     <header>
@@ -12,9 +12,9 @@
     <main>
       <div>
         <h2>Installation</h2>
-        <form method="post" action="../api/install.php">
+        <form method="post" action="/api/install">
           <span>username: <input type="text" name="username" value="ubuntu" placeholder="ubuntu" required></span>
-          <span>host: <input type="text" name="host" placeholder="0.0.0.0" required></span>
+          <span>host: <input type="text" name="host" placeholder="0.0.0.0" pattern="(?:\d{1,3}\.){3}\d{1,3}" required></span>
           <span>pemkey: <input type="file" name="pemkey" placeholder="key.pem" required></span>
           <span>.env: <input type="file" name="envfile" required></span>
           <button type="submit">Install</button>
@@ -22,12 +22,12 @@
       </div>
       <div>
         <h2>Migration</h2>
-        <form method="post" action="../api/install.php">
+        <form method="post" action="/api/install">
           <span>old_username: <input type="text" name="old_username" value="ubuntu" placeholder="ubuntu" required></span>
-          <span>old_host: <input type="text" name="old_host" placeholder="0.0.0.0" required></span>
+          <span>old_host: <input type="text" name="old_host" placeholder="0.0.0.0" pattern="(?:\d{1,3}\.){3}\d{1,3}" required></span>
           <span>old_pemkey: <input type="file" name="old_pemkey" placeholder="key.pem" required></span>
           <span>new_username: <input type="text" name="new_username" value="ubuntu" placeholder="ubuntu" required></span>
-          <span>new_host: <input type="text" name="new_host" placeholder="0.0.0.0" required></span>
+          <span>new_host: <input type="text" name="new_host" placeholder="0.0.0.0" pattern="(?:\d{1,3}\.){3}\d{1,3}" required></span>
           <span>new_pemkey: <input type="file" name="new_pemkey" placeholder="key.pem" required></span>
           <button type="submit">Migrate</button>
         </form>

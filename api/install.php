@@ -1,7 +1,7 @@
 <?php
   header("Content-Type: application/json");
 
-  if ($_SERVER["REQUEST_METHOD"]) {
+  if ($_SERVER["REQUEST_METHOD"]=="POST") {
     $username=$_POST["username"];
     $host=$_POST["host"];
     $pemkey=$_POST["sshkey.pem"];
