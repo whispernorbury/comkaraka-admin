@@ -24,10 +24,7 @@ form {
   gap: 10px;
   margin: auto;
   padding: auto;
-  width: 400px;
-}
-div {
-  height: 400px;
+  width: 30vw;
 }
 footer {
   text-align: center;

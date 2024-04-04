@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
     <title>Comkaraka / Admin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
     <link rel="stylesheet" type="text/css" href="styles.css"/>
   </head>
   <body>
@@ -16,7 +17,7 @@
           <span>host: <input type="text" name="host" placeholder="0.0.0.0" required></span>
           <span>pemkey: <input type="file" name="pemkey" placeholder="key.pem" required></span>
           <span>.env: <input type="file" name="envfile" required></span>
-          <button type="submit">확인</button>
+          <button type="submit">Install</button>
         </form>
       </div>
       <div>
@@ -28,10 +29,10 @@
           <span>new_username: <input type="text" name="new_username" value="ubuntu" placeholder="ubuntu" required></span>
           <span>new_host: <input type="text" name="new_host" placeholder="0.0.0.0" required></span>
           <span>new_pemkey: <input type="file" name="new_pemkey" placeholder="key.pem" required></span>
-          <button type="submit">확인</button>
+          <button type="submit">Migrate</button>
         </form>
       </div>
     </main>
-    <footer>Happy Day!</footer>
+    <footer>&copy; 2024, Sunwoo Jeong all rights reserved<br>styled by Pico CSS</footer>
   </body>
 </html>
