@@ -14,7 +14,7 @@
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
     # install
-    $scritp_path="./install.sh";
+    $scritp_path="./installscript.sh";
     $handle = popen("sh $script_path $username $host $pemkey $repo $MYSQL_ROOT_PASSWORD $ELASTIC_PASSWORD 2>&1", "r");
 
     while (!feof($handle)) {
