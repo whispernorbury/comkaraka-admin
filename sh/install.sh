@@ -41,7 +41,6 @@ if [ $? -eq 0 ]; then
   echo "####### Installation Complete #######"
 
 else
-  echo "Cannot connect server"  
-  echo "check 
+  echo "Cannot connect server. Check SSH Connection."  
 
 fi

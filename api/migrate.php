@@ -17,7 +17,7 @@
     $old_pemkey=file_get_contents($_FILES["old_pemkey"]["tmp_name"]);
 
     # install
-    $script_path="/var/task/user/sh/migrate.sh";
+    $script_path="../sh/migrate.sh";
     $command="sh $script_path $new_username $new_host $new_pemkey $old_username $old_host $old_pemkey";
 
     ob_start();
