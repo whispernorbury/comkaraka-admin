@@ -12,7 +12,7 @@
     <main>
       <div>
         <h2>Installation</h2>
-        <form method="post" action="/install" enctype="multipart/form-data">
+        <form method="post" action="/api/install" enctype="multipart/form-data">
           <span>username: <input type="text" name="username" value="ubuntu" placeholder="ubuntu" required></span>
           <span>host: <input type="text" name="host" placeholder="0.0.0.0" pattern="(?:\d{1,3}\.){3}\d{1,3}" required></span>
           <span>pemkey: <input type="file" name="pemkey" placeholder="key.pem" accept=".pem" required></span>
@@ -23,7 +23,7 @@
       </div>
       <div>
         <h2>Migration</h2>
-        <form method="post" action="/migrate">
+        <form method="post" action="/api/migrate">
           <span>old_username: <input type="text" name="old_username" value="ubuntu" placeholder="ubuntu" required></span>
           <span>old_host: <input type="text" name="old_host" placeholder="0.0.0.0" pattern="(?:\d{1,3}\.){3}\d{1,3}" required></span>
           <span>old_pemkey: <input type="file" name="old_pemkey" placeholder="key.pem" accept=".pem" required></span>
