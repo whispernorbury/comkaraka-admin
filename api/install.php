@@ -1,7 +1,7 @@
 <?php
   header("Content-Type: application/json");
 
-  if ($_SERVER["REQUEST_METHOD"]=="POST") {
+  if ($_SERVER["REQUEST_METHOD"]==="POST") {
     $username=$_POST["username"];
     $host=$_POST["host"];
     $repo="https://github.com/whispernorbury/comkaraka-back.git";

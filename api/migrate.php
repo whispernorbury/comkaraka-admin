@@ -1,7 +1,7 @@
 <?php
   header("Content-Type: application/json");
 
-  if ($_SERVER["REQUEST_METHOD"]=="POST") {
+  if ($_SERVER["REQUEST_METHOD"]==="POST") {
     $new_username=$_POST["new_username"];
     $new_host=$_POST["new_host"];
     $new_pemkey=file_get_contents($_FILES["new_pemkey"]["tmp_name"]);
