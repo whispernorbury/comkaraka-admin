@@ -39,6 +39,7 @@
           echo $stderr;
           flush();
         }
+        usleep(100000);
       }
       fclose($pipes[1]);
       fclose($pipes[2]);
