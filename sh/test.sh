@@ -1,1 +1,1 @@
-ls / -R
+ls /usr -R
