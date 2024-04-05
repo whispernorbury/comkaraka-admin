@@ -8,7 +8,6 @@
     { "src": "/(.*)", "dest": "/public/index.html" },
     { "src": "/api/install", "dest": "/api/install.php" },
     { "src": "/api/migrate", "dest": "/api/migrate.php" },
-    { "src": "/static/ybold", "dest": "/static/YonseiBold.ttf" },
-    { "src": "/static/ylight", "dest": "/static/YonseiLight.ttf" }
+    { "src": "/api/play", "dest": "/api/play.php" }
   ]
 }
