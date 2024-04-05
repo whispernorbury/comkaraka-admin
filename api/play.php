@@ -1,6 +1,5 @@
 <?php
-  ini_set('output_buffering', 'off');
-  ini_set('zlib.output_compression', false);
+  ob_end_clean();
   header("Content-Type: application/json");
 
   if ($_SERVER["REQUEST_METHOD"]==="GET") {
@@ -11,6 +10,7 @@
       while (!feof($process)) {
         $output=fread($process, 8192);
         echo $output;
+        ob_flush();
         flush();
       }
       $exitCode=pclose($process);
