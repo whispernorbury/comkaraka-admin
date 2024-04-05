@@ -14,16 +14,12 @@
 
     # get files
     $agora="~/";
-    move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $agora."firebase-key.json");
-    move_uploaded_file($_FILES["envfile"]["tmp_name"], $agora.".env");
+    shell_exec("ls");
+    // move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $agora."firebase-key.json");
+    // move_uploaded_file($_FILES["envfile"]["tmp_name"], $agora.".env");
     
     $envfile=$agora.".env";
     $firebase_key=$agora."firebase-key.json";
-
-    echo $envfile;
-    echo $firebase_key;
-    echo $MYSQL_ROOT_PASSWORD;
-    echo $ELASTIC_PASSWORD;
 
     # install
     // $scritp_path="installscript.sh";
