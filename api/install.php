@@ -13,10 +13,10 @@
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
     # get files
-    $agora="~/";
-    $output=shell_exec("ls ~ -al");
-    echo $output;
-    // move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $agora."firebase-key.json");
+    echo $_FILES["firebase_key"]["tmp_name"];
+    echo $_FILES["envfile"]["tmp_name"];
+
+    // move_uploaded_file($_FILES["firebase_key"]["tmp_name"], "firebase-key.json");
     // move_uploaded_file($_FILES["envfile"]["tmp_name"], $agora.".env");
     
     $envfile=$agora.".env";
