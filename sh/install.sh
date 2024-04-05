@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-sudo apt-get install openssh-client
+apt-get install openssh-client
 username=$1
 host=$2
 repo=$3
