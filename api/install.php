@@ -11,7 +11,6 @@
     $username=$_POST["username"];
     $host=$_POST["host"];
     $repo="https://github.com/whispernorbury/comkaraka-back.git";
-    $pemkey=file_get_contents($_FILES["pemkey"]["tmp_name"]);
 
     # Parse .env
     $envals=parse_ini_file($_FILES["envfile"]["tmp_name"]);
@@ -19,12 +18,13 @@
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
     # get files
+    move_uploaded_file($_FILES["pemkey"]["tmp_name"], "/tmp/sshkey.pem");
     move_uploaded_file($_FILES["firebase_key"]["tmp_name"], "/tmp/firebase-key.json");
     move_uploaded_file($_FILES["envfile"]["tmp_name"], "/tmp/.env");
     
     $envfile="/tmp/.env";
     $firebase_key="/tmp/firebase-key.json";
-
+    $pemkey="/tmp/sshkey.pem";
     # install
     $script_path="../sh/install.sh";
 
