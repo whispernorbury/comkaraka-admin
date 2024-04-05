@@ -1,5 +1,15 @@
 #!/bin/bash
 
+# Configuration
+username=$1
+host=$2
+repo=$3
+pemkey=$4
+envfile=$5
+firebase_key=$6
+MYSQL_ROOT_PASSWORD=$7
+ELASTIC_PASSWORD=$8
+
 # refresh ssh key
 ssh -i $pemkey $username@$host exit
 
@@ -20,7 +30,7 @@ if [ $? -eq 0 ]; then
   "
 
   # copy private files
-  scp -i $pemkey .env firebase-key.json $username@$host:~/comkaraka-back
+  scp -i $pemkey $envfile $firebase_key $username@$host:~/comkaraka-back
 
   # permission setting
   ssh -i $pemkey $username@$host "
@@ -29,4 +39,9 @@ if [ $? -eq 0 ]; then
   sudo chmod -R g+w /root/Docker/comkaraka;
   "
   echo "####### Installation Complete #######"
+
+else
+  echo "Cannot connect server"  
+  echo "check 
+
 fi
