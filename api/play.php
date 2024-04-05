@@ -1,4 +1,6 @@
 <?php
+  ini_set('output_buffering', 'off');
+  ini_set('zlib.output_compression', false);
   header("Content-Type: application/json");
 
   if ($_SERVER["REQUEST_METHOD"]==="GET") {
