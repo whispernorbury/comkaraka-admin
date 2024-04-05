@@ -13,12 +13,11 @@
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
     # get files
-    $tmp = "\/tmp/";
-    move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $tmp."firebase-key.json");
-    move_uploaded_file($_FILES["envfile"]["tmp_name"], $tmp.".env");
+    move_uploaded_file($_FILES["firebase_key"]["tmp_name"], "/tmp/firebase-key.json");
+    move_uploaded_file($_FILES["envfile"]["tmp_name"], "/tmp/.env");
     
-    $envfile=$tmp.".env";
-    $firebase_key=$tmp."firebase-key.json";
+    $envfile="/tmp/.env";
+    $firebase_key="/tmp/firebase-key.json";
 
     # install
     $scritp_path="installscript.sh";
