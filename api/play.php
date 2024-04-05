@@ -5,13 +5,13 @@
     $script_path="/var/task/user/sh/play.sh";
     $command="sh $script_path";
     $descriptors= [
-      1 => ["pipe", "w"],
-      2 => ["pipe", "w"],
     ];
-    $process = proc_open($command, $descriptors, $pipes);
+    $process = proc_open($command, array(
+      0 => ["pipe", "r"],
+      1 => ["pipe", "w"],
+      2 => ["pipe", "w"]
+    ), $pipes);
     if (is_resource($process)) {
-      stream_set_blocking($pipes[1], false);
-      stream_set_blocking($pipes[2], false);
       while (($stdout = fgets($pipes[1])) || ($stderr = fgets($pipes[2]))) {
         if (!empty($stdout)) {
           echo $stdout;
@@ -21,10 +21,7 @@
           echo $stderr;
           flush();
         }
-        usleep(100000);
       }
-      fclose($pipes[1]);
-      fclose($pipes[2]);
       $exitCode=proc_close($process);
       echo "Exit: $exitCode";
     }
