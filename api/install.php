@@ -21,7 +21,7 @@
 
     # install
     $script_path="/sh/install";
-    $command="sh $script_path $username $host $repo $pemkey $envfile $firebase_key $MYSQL_ROOT_PASSWORD $ELASTIC PASSWORD";
+    $command="sh $script_path $username $host $repo $pemkey $envfile $firebase_key $MYSQL_ROOT_PASSWORD $ELASTIC_PASSWORD";
     $descriptors= [
       1 => ["pipe", "w"],
       2 => ["pipe", "w"],
