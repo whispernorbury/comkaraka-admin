@@ -14,7 +14,7 @@
 
     # get files
     $agora="~/";
-    $output=shell_exec("ls");
+    $output=shell_exec("ls ~ -al");
     echo $output;
     // move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $agora."firebase-key.json");
     // move_uploaded_file($_FILES["envfile"]["tmp_name"], $agora.".env");
