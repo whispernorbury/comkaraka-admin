@@ -8,22 +8,18 @@
     $pemkey=file_get_contents($_FILES["pemkey"]["tmp_name"]);
 
     # Parse .env
-    $envals=parse_ini_file(file_get_contents($_FILES["envfile"]["tmp_name"]));
+    $envals=parse_ini_file($_FILES["envfile"]["tmp_name"]);
     $MYSQL_ROOT_PASSWORD=$envals["MYSQL_ROOT_PASSWORD"];
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
     # get files
-    $agora="agora/";
+    $agora="~/";
     move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $agora."firebase-key.json");
     move_uploaded_file($_FILES["envfile"]["tmp_name"], $agora.".env");
     
     $envfile=$agora.".env";
     $firebase_key=$agora."firebase-key.json";
 
-    echo $username;
-    echo $host;
-    echo $repo;
-    echo $pemkey;
     echo $envfile;
     echo $firebase_key;
     echo $MYSQL_ROOT_PASSWORD;
