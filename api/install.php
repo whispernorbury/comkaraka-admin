@@ -8,7 +8,7 @@
     $pemkey=file_get_contents($_FILES["pemkey"]["tmp_name"]);
 
     # Parse .env
-    $envals=parse_ini_file(file_get_contents($_FILES["envfile"][""]));
+    $envals=parse_ini_file(file_get_contents($_FILES["envfile"]["tmp_name"]));
     $MYSQL_ROOT_PASSWORD=$envals["MYSQL_ROOT_PASSWORD"];
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
