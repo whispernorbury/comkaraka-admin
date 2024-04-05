@@ -9,7 +9,7 @@
   ini_set('implicit_flush', true);
   ob_implicit_flush(true);
   
-  $script_path="/var/task/user/sh/play.sh";
+  $script_path="/var/task/user/sh/test.sh";
   $command="sh $script_path";
 
   ob_start();
