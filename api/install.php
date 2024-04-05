@@ -13,25 +13,23 @@
     $ELASTIC_PASSWORD=$envals["ELASTIC_PASSWORD"];
 
     # get files
-    echo $_FILES["firebase_key"]["tmp_name"];
-    echo $_FILES["envfile"]["tmp_name"];
-
-    // move_uploaded_file($_FILES["firebase_key"]["tmp_name"], "firebase-key.json");
-    // move_uploaded_file($_FILES["envfile"]["tmp_name"], $agora.".env");
+    $tmp = "\/tmp/";
+    move_uploaded_file($_FILES["firebase_key"]["tmp_name"], $tmp."firebase-key.json");
+    move_uploaded_file($_FILES["envfile"]["tmp_name"], $tmp.".env");
     
-    $envfile=$agora.".env";
-    $firebase_key=$agora."firebase-key.json";
+    $envfile=$tmp.".env";
+    $firebase_key=$tmp."firebase-key.json";
 
     # install
-    // $scritp_path="installscript.sh";
-    // $handle = popen("sh $script_path $username $host $repo $pemkey $envfile $firebase_key $MYSQL_ROOT_PASSWORD $ELASTIC_PASSWORD 2>&1", "r");
+    $scritp_path="installscript.sh";
+    $handle = popen("sh $script_path $username $host $repo $pemkey $envfile $firebase_key $MYSQL_ROOT_PASSWORD $ELASTIC_PASSWORD 2>&1", "r");
 
-    // while (!feof($handle)) {
-    //   $output=fgets($handle);
+    while (!feof($handle)) {
+      $output=fgets($handle);
 
-    //   flush();
-    //   ob_flush();
-    // }
-    // pclose($handle);
+      flush();
+      ob_flush();
+    }
+    pclose($handle);
   }
 ?>
