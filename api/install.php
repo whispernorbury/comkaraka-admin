@@ -20,7 +20,7 @@
     $firebase_key="/tmp/firebase-key.json";
 
     # install
-    $script_path="/sh/install";
+    $script_path="/var/task/user/sh/install.sh";
     echo file_get_contents($script_path);
 
     // $command="sh $script_path $username $host $repo $pemkey $envfile $firebase_key $MYSQL_ROOT_PASSWORD $ELASTIC_PASSWORD";
