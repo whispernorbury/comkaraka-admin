@@ -1,1 +1,1 @@
-which ssh
+ls / -al
