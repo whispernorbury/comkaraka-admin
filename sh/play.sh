@@ -11,6 +11,6 @@ echo "I will wait you 3s for test"
 sleep 3
 echo "waited 3s"
 sleep 0.5
-echo "Bye..."`
+echo "Bye..."
 sleep 0.5
 echo "#### script END #### "
