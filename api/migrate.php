@@ -8,7 +8,7 @@
   $old_pemkey=file_get_contents($_FILES["old_pemkey"]["tmp_name"]);
 
   # install
-  $scritp_path="./migratescript.sh";
+  $scritp_path="/var/task/user/sh/migrate.sh";
   $handle = popen("sh $script_path $new_username $new_host $new_pemkey $old_username $old_host $old_pemkey 2>&1", "r");
 
   while (!feof($handle)) {

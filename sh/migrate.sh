@@ -1,6 +1,13 @@
 #!bin/bash
 
 ### Configuration
+old_username=$1
+old_host=$2
+old_pemkey=$3
+new_username=$4
+new_host=$5
+new_pemkey=$6
+
 tarName="vol_$(date +%Y-%m-%d_%H-%M-%S).tar.gz"
 
 # Migrate

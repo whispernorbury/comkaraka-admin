@@ -1,10 +1,10 @@
 @font-face {
   font-family: "ybold";
-  src: url("/static/ybold.ttf");
+  src: url("/static/ybold");
 }
 @font-face {
   font-family: "ylight";
-  src: url("/static/ylight.ttf");
+  src: url("/static/ylight");
 }
 body {
   font-family: "ylight";
