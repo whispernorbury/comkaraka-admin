@@ -1,1 +1,1 @@
-ls /bin
+which ssh
