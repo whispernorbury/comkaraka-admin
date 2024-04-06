@@ -6,9 +6,10 @@
     }
   },
   "routes": [
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/public/index.html" },
-    { "src": "/install", "dest": "/api/install.php" },
-    { "src": "/migrate", "dest": "/api/migrate.php" },
-    { "src": "/play", "dest": "/api/play.php" }
+    { "src": "^/install$", "method": ["POST"], "dest": "/api/install.php" },
+    { "src": "^/migrate$", "method": ["POST"], "dest": "/api/migrate.php" },
+    { "src": "^/play$", "method": ["GET"], "dest": "/api/play.php" }
   ]
 }
