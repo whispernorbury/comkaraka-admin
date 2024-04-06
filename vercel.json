@@ -1,4 +1,5 @@
 {
+  "installCommand": "yum -y install openssh-clients",
   "functions": {
     "api/*.php": {
       "runtime": "vercel-php@0.7.0"
